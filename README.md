@@ -31,6 +31,15 @@ Referência oficial:
 4. Converte a probabilidade em `health_score` e `fleet_band`.
 5. Exporta um resumo pronto para control tower de manutenção.
 
+### Arquitetura conceitual
+```mermaid
+flowchart LR
+    A["Natural gas asset telemetry"] --> B["Feature preparation"]
+    B --> C["Maintenance classifier"]
+    C --> D["Fleet scoring"]
+    D --> E["Health and criticality summary"]
+```
+
 ### Estrutura do projeto
 - `main.py`: entry point local.
 - `src/sample_data.py`: gera a base sintética inspirada em compressor industrial e ativos movidos a gás natural.
@@ -80,6 +89,14 @@ O projeto gera:
 
 Essa segunda saída representa a visão que uma control tower usaria para priorização diária.
 
+### Contrato de saída
+Artefatos principais:
+- [natural_gas_scored_cycles.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_scored_cycles.csv)
+- [natural_gas_fleet_summary.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_fleet_summary.csv)
+- [natural_gas_fleet_maintenance_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_fleet_maintenance_report.json)
+
+O valor principal aqui é o snapshot de frota por ativo, não apenas a métrica offline.
+
 ### Resultados atuais
 - `dataset_source = natural_gas_fleet_sample_metropt3_style`
 - `row_count = 627`
@@ -106,6 +123,12 @@ No nível avançado, ele permite discutir:
 - governança de sinais de telemetria;
 - monitoramento de drift e estabilidade operacional;
 - escalabilidade por base, região e tipo de ativo energético.
+
+### Como defender este projeto em entrevista
+- ele conecta manutenção preditiva com eficiência operacional e energética;
+- mostra como transformar score em gestão de frota;
+- é útil para discutir backlog técnico, consumo, confiabilidade e telemetria industrial;
+- deixa claro o trade-off entre simplicidade do batch e responsividade do stream.
 
 ### Batch vs stream
 - `batch`:
@@ -149,6 +172,12 @@ The project is framed around the **MetroPT-3 Dataset** from UCI, a classic compr
 3. Scores the latest cycle of each asset.
 4. Converts probabilities into `health_score` and `fleet_band`.
 5. Exports a fleet summary for maintenance prioritization.
+
+### Output contract
+The project exports:
+- [natural_gas_scored_cycles.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_scored_cycles.csv)
+- [natural_gas_fleet_summary.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_fleet_summary.csv)
+- [natural_gas_fleet_maintenance_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_fleet_maintenance_report.json)
 
 ### Current results
 - `dataset_source = natural_gas_fleet_sample_metropt3_style`
