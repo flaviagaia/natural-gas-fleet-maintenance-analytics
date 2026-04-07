@@ -1,0 +1,7 @@
+{
+  "dataset_name": "MetroPT-3 Dataset",
+  "dataset_owner": "UCI Machine Learning Repository",
+  "dataset_reference": "MetroPT-3 Dataset",
+  "dataset_url": "https://archive.ics.uci.edu/dataset/791/metropt+3+",
+  "dataset_note": "This project uses a compact local telemetry sample inspired by compressor predictive-maintenance datasets such as MetroPT-3, adapted to a natural-gas-powered fleet maintenance framing for deterministic execution."
+}
