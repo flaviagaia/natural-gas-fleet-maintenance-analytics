@@ -72,7 +72,7 @@ O pipeline usa:
 Essa modelagem faz sentido porque:
 - capta não linearidade entre eficiência, pressão, temperatura e vibração;
 - é robusta para um MVP local;
-- permite explicar o raciocínio operacional em entrevista.
+- permite explicar o raciocínio operacional com clareza.
 
 ### Saídas operacionais
 O projeto gera:
@@ -91,9 +91,9 @@ Essa segunda saída representa a visão que uma control tower usaria para priori
 
 ### Contrato de saída
 Artefatos principais:
-- [natural_gas_scored_cycles.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_scored_cycles.csv)
-- [natural_gas_fleet_summary.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_fleet_summary.csv)
-- [natural_gas_fleet_maintenance_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_fleet_maintenance_report.json)
+- [natural_gas_scored_cycles.csv](data/processed/natural_gas_scored_cycles.csv)
+- [natural_gas_fleet_summary.csv](data/processed/natural_gas_fleet_summary.csv)
+- [natural_gas_fleet_maintenance_report.json](data/processed/natural_gas_fleet_maintenance_report.json)
 
 O valor principal aqui é o snapshot de frota por ativo, não apenas a métrica offline.
 
@@ -124,11 +124,6 @@ No nível avançado, ele permite discutir:
 - monitoramento de drift e estabilidade operacional;
 - escalabilidade por base, região e tipo de ativo energético.
 
-### Como defender este projeto em entrevista
-- ele conecta manutenção preditiva com eficiência operacional e energética;
-- mostra como transformar score em gestão de frota;
-- é útil para discutir backlog técnico, consumo, confiabilidade e telemetria industrial;
-- deixa claro o trade-off entre simplicidade do batch e responsividade do stream.
 
 ### Batch vs stream
 - `batch`:
@@ -175,9 +170,9 @@ The project is framed around the **MetroPT-3 Dataset** from UCI, a classic compr
 
 ### Output contract
 The project exports:
-- [natural_gas_scored_cycles.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_scored_cycles.csv)
-- [natural_gas_fleet_summary.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_fleet_summary.csv)
-- [natural_gas_fleet_maintenance_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/natural-gas-fleet-maintenance-analytics/data/processed/natural_gas_fleet_maintenance_report.json)
+- [natural_gas_scored_cycles.csv](data/processed/natural_gas_scored_cycles.csv)
+- [natural_gas_fleet_summary.csv](data/processed/natural_gas_fleet_summary.csv)
+- [natural_gas_fleet_maintenance_report.json](data/processed/natural_gas_fleet_maintenance_report.json)
 
 ### Current results
 - `dataset_source = natural_gas_fleet_sample_metropt3_style`
